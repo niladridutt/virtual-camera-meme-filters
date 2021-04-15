@@ -1,7 +1,9 @@
 # virtual-camera-meme-filters
 Overlay gifs of memes on your video calls (works with Zoom, Google Meet, Microsoft Teams)
 
-[Demo]('demo.gif')
+<p align="center">
+  <img src="demo.gif">
+</p>
 
 ## Installation guide
 
