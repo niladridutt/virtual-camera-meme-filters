@@ -28,6 +28,7 @@ python run.py --filter cat
 python run.py --filter pikachu --magnify 1.5 --speed 5
 ```
 4 filter options - ['cat','pikachu','rainbow_cat','dog']
+
 All filters have customized default settings but feel free to play with it!
 
 

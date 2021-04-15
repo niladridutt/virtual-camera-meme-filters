@@ -4,6 +4,7 @@ import pyvirtualcam
 from pyvirtualcam import PixelFormat
 import numpy as np
 from numba import jit
+from map import gif_map
 
 PREF_WIDTH = 1280
 PREF_HEIGHT = 720
@@ -18,20 +19,6 @@ def swap(frame, meme, meme_width, meme_height, position, frame_height, count):
             if not (meme[i][j][0])+(meme[i][j][1])+(meme[i][j][2]) == 255*3:
                 frame[i+skip][j+count] = meme[i][j]
     return frame
-
-gif_map = {
-'cat' : {'path' : 'gifs/cat.gif', 'flip' : False, 'magnify' : 2.5,
-            'position' : "bottom", 'speed' : 0
-},
-'pikachu' : {'path' : 'gifs/pikachu.gif', 'flip' : False, 'magnify' : 1.2,
-            'position' : "top", 'speed' : 4
-},
-'dog' : {'path' : 'gifs/dog.gif', 'flip' : False, 'magnify' : 0.5,
-            'position' : "top", 'speed' : 4
-},
-'rainbow_cat' : {'path' : 'gifs/rainbow_cat.gif', 'flip' : True, 'magnify' : 1,
-            'position' : "top", 'speed' : 4
-}}
 
 def main():
     parser = argparse.ArgumentParser()
@@ -65,7 +52,6 @@ def main():
     magnify = gif_map[character]['magnify'] if args.magnify ==None else args.magnify
     position = gif_map[character]['position'] if args.position ==None else args.position
     speed = gif_map[character]['speed'] if args.speed ==None else args.speed
-    print(type(speed))
 
     fps_out = 20
 
@@ -110,3 +96,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
