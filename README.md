@@ -21,6 +21,9 @@ pip install -r requirements.txt
 ```
 python run.py --filter['cat' or 'pikachu' or 'rainbow_cat' or 'dog'] --position['top' or 'bottom'] --magnify[magnification factor eg: 2.3] --speed[0 for idle, eg : 2 will move it from right to left]
 ```
+
+Eg :
+
 ```
 python run.py --filter cat
 ```
